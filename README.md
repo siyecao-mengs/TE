@@ -14,3 +14,8 @@
 - 🛠️ 技术栈
 
 Avalonia 12 + .NET 10 + C# + FFmpeg
+
+---
+
+## QQ交流群
+![TE图标](https://github.com/siyecao-mengs/TE/blob/main/QQ交流群.jpg)
