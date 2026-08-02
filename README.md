@@ -1,5 +1,5 @@
 # TE 终端盒子 v1.0.1(beta) 即将发布！
-
+![TE图标](https://github.com/siyecao-mengs/TE/blob/main/icon.png)
 一款绿色、轻量、高颜值的 Windows 终端美化工具，后续版本将支持linux终端，termux终端
 
 ## 功能说明
