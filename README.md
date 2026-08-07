@@ -2,7 +2,7 @@
 
 <img src="https://github.com/siyecao-mengs/TE/blob/main/icon.png" width="15%">
 
-### 一款绿色、轻量、高颜值的 Windows 终端美化工具，后续版本将支持linux终端，termux终端
+### 一款绿色、高颜值的 Windows 终端美化工具，后续版本将支持linux终端，termux终端
 
 ---
 
@@ -55,8 +55,3 @@ flowchart LR
     D --> G[ffmpeg.exe]
 ```
 ---
-
-# 使用方法
-
-## 1.下载
-
