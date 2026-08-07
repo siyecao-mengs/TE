@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root {
+            --primary: #4A9EFF;
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --sub: #8b949e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', SimHei, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            padding: 48px 32px;
+            overflow-x: hidden;
+        }
+
+        /* ====== 星空背景粒子 ====== */
+        .stars {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 0;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle var(--dur) ease-in-out infinite;
+            animation-delay: var(--delay);
+            opacity: 0;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.8); }
+        }
+
+        /* ====== 主内容区 ====== */
+        .container {
+            position: relative; z-index: 1;
+            max-width: 720px; margin: 0 auto;
+        }
+
+        /* ====== 标题区 ====== */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero .logo {
+            width: 80px; height: 80px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, var(--primary), #7c5cfc);
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 0 40px rgba(74,158,255,0.3);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 40px rgba(74,158,255,0.3); }
+            50% { box-shadow: 0 0 80px rgba(74,158,255,0.6), 0 0 120px rgba(124,92,252,0.3); }
+        }
+        .hero h1 {
+            font-size: 28px; font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), #7c5cfc, #4A9EFF);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 4s ease infinite;
+        }
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .hero .version {
+            font-size: 14px; color: var(--sub);
+            margin-top: 4px;
+        }
+        .hero .badge-row {
+            display: flex; justify-content: center; gap: 10px;
+            margin-top: 12px; flex-wrap: wrap;
+        }
+        .badge {
+            padding: 4px 14px; border-radius: 20px;
+            font-size: 12px; font-weight: 600;
+            border: 1px solid var(--border);
+            background: var(--card);
+        }
+        .badge.mit { color: #3fb950; border-color: #3fb95040; }
+        .badge.win { color: var(--primary); border-color: #4A9EFF40; }
+        .badge.csharp { color: #7c5cfc; border-color: #7c5cfc40; }
+
+        /* ====== 特性卡片 ====== */
+        .section {
+            margin: 28px 0;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+        .section:nth-child(2) { animation-delay: 0.15s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.45s; }
+        .section:nth-child(5) { animation-delay: 0.6s; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 17px; font-weight: 700;
+            margin-bottom: 12px; padding-left: 14px;
+            border-left: 3px solid var(--primary);
+            color: #fff;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px; padding: 20px 24px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 24px rgba(74,158,255,0.1);
+        }
+        .card p { font-size: 14px; color: var(--sub); margin: 4px 0; }
+        .card b { color: var(--text); }
+
+        /* ====== 特性网格 ====== */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+        .feature-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px; padding: 16px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .feature-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+        .feature-item .icon { font-size: 28px; margin-bottom: 8px; }
+        .feature-item .label { font-size: 13px; color: var(--sub); }
+
+        /* ====== 链接区 ====== */
+        .link-card {
+            display: flex; align-items: center; gap: 14px;
+            padding: 14px 18px; margin: 8px 0;
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 10px; text-decoration: none;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .link-card:hover {
+            border-color: var(--primary);
+            background: #1a2030;
+        }
+        .link-card .link-icon { font-size: 22px; }
+        .link-card .link-info { flex: 1; }
+        .link-card .link-info .link-label { font-size: 13px; color: var(--primary); }
+        .link-card .link-info .link-val { font-size: 12px; color: var(--sub); }
+        .link-card .arrow { color: var(--sub); transition: transform 0.3s; }
+        .link-card:hover .arrow { transform: translateX(4px); color: var(--primary); }
+
+        /* ====== 分割线动画 ====== */
+        .glow-divider {
+            height: 1px; border: none;
+            background: linear-gradient(90deg, transparent, var(--border), var(--primary), var(--border), transparent);
+            margin: 28px 0;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        /* ====== 页脚 ====== */
+        .footer {
+            text-align: center; margin-top: 32px;
+            font-size: 13px; color: var(--sub);
+        }
+        .footer span { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <!-- 星空背景 -->
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+
+        <!-- 标题 -->
+        <div class="hero">
+            <div class="logo">🦆</div>
+            <h1>TE终端盒子</h1>
+            <p class="version">TerminalEmbellish v1.0.0-beta</p>
+            <div class="badge-row">
+                <span class="badge mit">MIT 开源</span>
+                <span class="badge win">Windows 10/11</span>
+                <span class="badge csharp">C# / Avalonia UI</span>
+            </div>
+        </div>
+
+        <hr class="glow-divider">
+
+        <!-- 简介 -->
+        <div class="section">
+            <div class="section-title">项目简介</div>
+            <div class="card">
+                <p>
+                    <b>TE终端盒子</b> 是一款 Windows 平台下的终端美化工具，
+                    让你的 CMD 和 PowerShell 告别枯燥的黑白界面，
+                    用卡片式管理、视频动态背景、毛玻璃效果重新定义终端体验。
+                </p>
+                <p style="margin-top:8px;">
+                    每个终端卡片独立配置，自定义背景（支持图片和视频），
+                    配置自动保存到本地 JSON，打开即用，无需重复设置。
+                </p>
+            </div>
+        </div>
+
+        <!-- 特性 -->
+        <div class="section">
+            <div class="section-title">主要特性</div>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="icon">🖥️</div>
+                    <div class="label">CMD / PowerShell<br>卡片式管理</div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">🎬</div>
+                    <div class="label">视频动态背景<br>ffmpeg 抽帧渲染</div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">🖼️</div>
+                    <div class="label">自定义背景<br>图片 / 视频自由切换</div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">💾</div>
+                    <div class="label">本地 JSON 存储<br>配置随用随走</div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">🔄</div>
+                    <div class="label">版本更新检测<br>GitHub / Gitee 双镜像</div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📖</div>
+                    <div class="label">内置帮助文档<br>Markdown / HTML 渲染</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 技术栈 -->
+        <div class="section">
+            <div class="section-title">技术栈</div>
+            <div class="card">
+                <p>框架：<b>Avalonia UI</b>（跨平台 .NET 桌面框架）</p>
+                <p>语言：<b>C#</b></p>
+                <p>视频处理：<b>ffmpeg</b>（独立进程调用，抽帧播放）</p>
+                <p>浏览器内核：<b>Avalonia WebView</b></p>
+                <p>存储：<b>本地 JSON</b></p>
+                <p>图标：<b>ProIcons</b>（MIT 许可）</p>
+            </div>
+        </div>
+
+        <hr class="glow-divider">
+
+        <!-- 链接 -->
+        <div class="section">
+            <div class="section-title">联系与源码</div>
+            <a class="link-card" href="https://github.com/siyecao-mengs/TE">
+                <div class="link-icon">🐙</div>
+                <div class="link-info">
+                    <div class="link-label">GitHub</div>
+                    <div class="link-val">siyecao-mengs/TE</div>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+            <a class="link-card" href="https://gitee.com/siyecao-meng/TE">
+                <div class="link-icon">🔴</div>
+                <div class="link-info">
+                    <div class="link-label">Gitee</div>
+                    <div class="link-val">siyecao-meng/TE</div>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+            <a class="link-card" href="mailto:siyecao-meng@outlook.com">
+                <div class="link-icon">📧</div>
+                <div class="link-info">
+                    <div class="link-label">联系开发者</div>
+                    <div class="link-val">siyecao-meng@outlook.com</div>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+        </div>
+
+        <!-- 致谢 -->
+        <div class="section">
+            <div class="section-title">致谢</div>
+            <div class="card">
+                <p>Avalonia UI 团队 — 跨平台 .NET 桌面框架</p>
+                <p>ProCode Software — ProIcons 图标库</p>
+                <p>ffmpeg 项目 — 视频处理引擎</p>
+                <p>Inter 字体 — Rasmus Andersson</p>
+                <p>以及所有为开源社区做出贡献的开发者们</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>🦆</span> TE终端盒子 — 让终端更好看
+        </div>
+
+    </div>
+
+    <script>
+        // 星空背景生成
+        (function() {
+            var container = document.getElementById('stars');
+            var count = 80;
+            for (var i = 0; i < count; i++) {
+                var star = document.createElement('div');
+                star.className = 'star';
+                var size = Math.random() * 2.5 + 1;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.setProperty('--dur', (Math.random() * 3 + 2) + 's');
+                star.style.setProperty('--delay', (Math.random() * 4) + 's');
+                container.appendChild(star);
+            }
+        })();
+    </script>
+
+</body>
+</html>

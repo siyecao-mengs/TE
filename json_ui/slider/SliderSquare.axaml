@@ -1,0 +1,5 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TerminalEmbellish.json_ui.slider.SliderSquare">
+  <Border x:Name="Thumb" CornerRadius="0" Background="#333333" Opacity="0.85" />
+</UserControl>

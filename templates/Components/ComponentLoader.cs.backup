@@ -1,0 +1,20 @@
+﻿using System;
+using Avalonia.Controls;
+
+namespace TerminalEmbellish.templates.Components;
+
+public static class ComponentLoader
+{
+    /// <summary>
+    /// 从 page_ui/dialogs 或 templates/Components 加载组件嘎
+    /// </summary>
+    public static Control? Load(string componentName)
+    {
+        // 先查 page_ui/dialogs 嘎
+        var type = Type.GetType($"TerminalEmbellish.page_ui.dialogs.{componentName}")
+                ?? Type.GetType($"TerminalEmbellish.templates.Components.{componentName}");
+
+        if (type == null) return new TextBlock { Text = $"组件 '{componentName}' 未找到嘎！" };
+        return Activator.CreateInstance(type) as Control;
+    }
+}

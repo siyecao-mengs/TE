@@ -1,0 +1,59 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TerminalEmbellish.page_ui.dialogs.Settings"
+             Background="White">
+    <Grid x:Name="RootGrid" Background="White">
+        <Grid VerticalAlignment="Top" Height="40" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="BtnBack" Width="32" Height="32"
+                    Background="Transparent" BorderThickness="0"
+                    Padding="0" Cursor="Hand"
+                    HorizontalAlignment="Left" VerticalAlignment="Center" Margin="6,0,0,0">
+            </Button>
+            <Border Grid.Column="1" x:Name="DragArea" Background="Transparent" />
+            <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="15"
+                        VerticalAlignment="Center" Margin="0,0,20,0">
+                <Button x:Name="BtnMin" Width="24" Height="24"
+                        Background="Transparent" BorderThickness="0" Padding="0" Cursor="Hand" />
+                <Button x:Name="BtnMax" Width="24" Height="24"
+                        Background="Transparent" BorderThickness="0" Padding="0" Cursor="Hand" />
+                <Button x:Name="BtnClose" Width="24" Height="24"
+                        Background="Transparent" BorderThickness="0" Padding="0" Cursor="Hand" />
+            </StackPanel>
+        </Grid>
+
+        <!-- 版本号区域嘎 -->
+        <StackPanel HorizontalAlignment="Center" Spacing="4" Margin="0,130,0,0">
+            <TextBlock x:Name="TbTitle"
+                       Text="TE终端盒子"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       FontFamily="Microsoft YaHei, SimHei, sans-serif"
+                       Foreground="#000000"
+                       HorizontalAlignment="Center" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="TbVersion"
+                           Text="TerminalEmbellish v1.0.0-beta"
+                           FontSize="12"
+                           FontFamily="Microsoft YaHei, SimHei, sans-serif"
+                           Foreground="#999999" />
+                <TextBlock x:Name="TbStatus"
+                           Text=" [正在检测]"
+                           FontSize="12"
+                           FontFamily="Microsoft YaHei, SimHei, sans-serif"
+                           Foreground="#999999" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- 设置内容区嘎 -->
+        <ScrollViewer x:Name="SettingsScroll" Margin="0,200,0,0">
+            <StackPanel x:Name="SettingsPanel" Spacing="8" Margin="16,0,16,16">
+                <!-- 内容由 CS 代码动态生成嘎 -->
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

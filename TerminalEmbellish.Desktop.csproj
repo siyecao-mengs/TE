@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="12.1.0" />
+    <PackageReference Include="Avalonia.Controls.WebView" Version="12.0.1" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.1.0" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.0" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="12.1.0" />
+    <PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.3">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="help\**\*" CopyToPublishDirectory="PreserveNewest" Link="help\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="icon_lib\**\*" CopyToPublishDirectory="PreserveNewest" Link="icon_lib\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="html_ui\**\*" CopyToPublishDirectory="PreserveNewest" Link="html_ui\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="json_ui\**\*" CopyToPublishDirectory="PreserveNewest" Link="json_ui\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="plugin_store\**\*" CopyToPublishDirectory="PreserveNewest" Link="plugin_store\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="page_ui\**\*" CopyToPublishDirectory="PreserveNewest" Link="page_ui\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="dll_os\**\*" CopyToPublishDirectory="PreserveNewest" Link="dll_os\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="WebView2\**\*" CopyToPublishDirectory="PreserveNewest" Link="WebView2\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="*.mp4" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="*.jpg" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="*.jpeg" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="*.png" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="*.ico" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="ffmpeg.exe" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+</Project>

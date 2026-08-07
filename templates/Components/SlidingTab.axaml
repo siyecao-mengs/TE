@@ -1,0 +1,12 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TerminalEmbellish.templates.Components.SlidingTab">
+    <Grid x:Name="Root" RowDefinitions="Auto,*">
+        <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" 
+                    Grid.Row="0"
+                    HorizontalAlignment="Center" Background="Transparent" />
+        <Border x:Name="Indicator" Grid.Row="0" Height="3" Background="#667eea" 
+                HorizontalAlignment="Left" CornerRadius="2" Margin="0,42,0,0" />
+        <Border x:Name="ContentHost" Grid.Row="1" Background="Transparent" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,19 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TerminalEmbellish.page_ui.Terminal.TerminalWindow"
+             Background="Transparent">
+    <Grid x:Name="RootGrid">
+        <Border x:Name="DragArea" Height="30" VerticalAlignment="Top" Background="Transparent" Cursor="Hand" />
+        <ScrollViewer Margin="0,30,0,0">
+            <StackPanel>
+                <SelectableTextBlock x:Name="TerminalOutput" 
+                           FontSize="18" FontFamily="Consolas"
+                           Foreground="#000000" 
+                           Margin="12"
+                           TextWrapping="Wrap" />
+                <Border Height="800" Background="Transparent" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
+

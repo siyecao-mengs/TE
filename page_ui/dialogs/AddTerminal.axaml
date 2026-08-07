@@ -1,0 +1,25 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TerminalEmbellish.page_ui.Dialogs.AddTerminal"
+             Background="Transparent">
+    <Border x:Name="MainBorder" CornerRadius="12" ClipToBounds="True">
+        <Grid x:Name="RootGrid">
+            <Border Height="40" VerticalAlignment="Top" Background="Transparent">
+                <TextBlock Text="添加终端" 
+                           FontSize="18" 
+                           FontWeight="Bold"
+                           Foreground="#000000" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center" />
+            </Border>
+            <StackPanel x:Name="ContentArea" Margin="0,40,0,0" 
+                        VerticalAlignment="Stretch" />
+            
+
+        </Grid>
+    </Border>
+</UserControl>
+
+
+
+

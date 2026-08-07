@@ -1,0 +1,28 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="TerminalEmbellish.page_ui.Guide.GuidePage"
+             Background="White">
+    <Grid>
+        <!-- 拖拽区域：顶部30px嘎 -->
+        <Border x:Name="DragArea" Height="30" VerticalAlignment="Top" Background="Transparent" Cursor="Hand" />
+        
+        <!-- 标题 -->
+        <Border Height="40" VerticalAlignment="Top" Background="Transparent" Margin="0,30,0,0">
+            <TextBlock Text="欢迎使用 TE 终端盒子" 
+                       FontSize="18" FontWeight="Bold"
+                       Foreground="#000000" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" />
+        </Border>
+
+        <!-- 内容区 -->
+        <StackPanel Margin="0,70,0,0" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Spacing="16">
+            <TextBlock Text="引导页面内容区域" 
+                       FontSize="14" 
+                       Foreground="#888888" />
+        </StackPanel>
+    </Grid>
+</UserControl>

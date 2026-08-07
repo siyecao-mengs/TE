@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 100%;
+            overflow-y: scroll !important;
+            -webkit-overflow-scrolling: touch;
+        }
+        body {
+            font-family: 'Microsoft YaHei', SimHei, sans-serif;
+            padding: 20px 24px;
+            color: #333;
+            line-height: 1.9;
+            background: #fff;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            margin: 8px 0 16px 0;
+            text-align: center;
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            margin: 24px 0 12px 0;
+            padding-left: 12px;
+            border-left: 3px solid #4A9EFF;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0;
+        }
+        ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        li {
+            font-size: 14px;
+            color: #555;
+            margin: 4px 0;
+        }
+        .note {
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: #f5f5f5;
+            border-left: 3px solid #4A9EFF;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #777;
+        }
+        .warning {
+            margin-top: 16px;
+            padding: 14px 18px;
+            background: #fff8f8;
+            border-left: 4px solid #F44336;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.9;
+        }
+        .warning b {
+            color: #c0392b;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+        .part-title {
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin: 28px 0 16px 0;
+            padding: 10px 0;
+            background: #fafbfc;
+            border-radius: 6px;
+            letter-spacing: 2px;
+        }
+        .path {
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 13px;
+            word-break: break-all;
+        }
+        a {
+            color: #4A9EFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 13px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TE终端盒子 用户协议</h1>
+
+    <p style="text-align:center;color:#999;font-size:12px;">版本：v1.0.0 | 最后更新：2026年8月6日</p>
+    <p style="text-align:center;color:#999;font-size:12px;">适用软件：TE终端盒子（TerminalEmbellish）| 开发者：siyecao-meng</p>
+
+    <hr class="divider">
+
+    <div class="warning">
+        <b>⚠ 重要提示</b><br>
+        请您在使用本软件之前，仔细阅读并充分理解本协议的全部条款。本协议由<b>《用户隐私与协议》</b><b>《作者免责声明》</b><b>《赞助协议》</b>三部分组成。<br><br>
+        <b>一旦您开始使用本软件，即视为您已阅读、理解并接受本协议所有条款。如果您不同意本协议的任何条款，请立即停止使用并卸载本软件。</b><br><br>
+        若您为<b>未成年人</b>，请在监护人的陪同下阅读本协议，并在获得监护人明确同意后使用本软件。
+    </div>
+
+    <!-- ==================== 第一部分 ==================== -->
+    <div class="part-title">第一部分：用户隐私与协议</div>
+
+    <h2>一、信息收集</h2>
+    <p><b>1.1</b> 本软件为<b>本地运行</b>的桌面应用程序，<b>不收集、不上传、不存储您的任何个人信息至远程服务器。</b></p>
+    <p><b>1.2</b> 您在本软件中进行的以下操作，数据<b>仅存储在您的本地设备</b>：</p>
+    <ul>
+        <li>终端卡片配置（名称、类型、描述、图标、背景图片/视频路径）</li>
+        <li>壁纸设置（主页面背景图片/视频路径）</li>
+        <li>字体样式偏好</li>
+        <li>窗口大小与位置</li>
+    </ul>
+    <p><b>1.3</b> 本软件<b>不会</b>收集以下信息：</p>
+    <ul>
+        <li>您的姓名、性别、年龄、身份证号等个人身份信息</li>
+        <li>您的 IP 地址、地理位置信息</li>
+        <li>您的浏览器历史记录</li>
+        <li>您在终端中输入的任何命令或输出内容</li>
+        <li>您的键盘输入记录</li>
+        <li>您的文件系统内容或目录结构</li>
+        <li>您的设备硬件信息或系统配置</li>
+    </ul>
+    <p><b>1.4</b> 本软件不使用 Cookies 或任何类似跟踪技术。</p>
+
+    <h2>二、网络请求</h2>
+    <p><b>2.1</b> 本软件在以下情况下会发起网络请求：</p>
+    <ul>
+        <li><b>版本更新检测</b>：连接 GitHub API（api.github.com）或 Gitee API（gitee.com）获取最新版本号</li>
+        <li><b>帮助文档资源加载</b>：浏览器控件加载帮助文档中的图片或外部资源（如二维码）</li>
+        <li><b>更新日志获取</b>：获取仓库 Release 内容用于展示</li>
+    </ul>
+    <p><b>2.2</b> 以上网络请求均为获取公开信息，<b>不附带任何用户数据或个人信息。</b></p>
+    <p><b>2.3</b> 您可以通过设置页面查看版本检测所使用的镜像源（GitHub / Gitee）。</p>
+    <p><b>2.4</b> 本软件不会在后台发起任何网络请求，所有请求均由您的主动操作触发。</p>
+
+    <h2>三、第三方服务</h2>
+    <p><b>3.1</b> 本软件使用了以下第三方开源库，它们各自拥有独立的许可协议：</p>
+    <ul>
+        <li>Avalonia UI（MIT 许可）— 跨平台 UI 框架</li>
+        <li>ffmpeg（LGPL v2.1+ 许可）— 视频处理引擎，以独立进程方式调用</li>
+        <li>ProIcons（MIT 许可）— 图标库</li>
+    </ul>
+    <p><b>3.2</b> 本软件<b>不集成</b>任何广告 SDK、用户行为分析 SDK、崩溃收集 SDK 或其他第三方追踪服务。</p>
+    <p><b>3.3</b> 本软件<b>不包含</b>任何形式的捆绑软件或插件推广。</p>
+
+    <h2>四、数据安全</h2>
+    <p><b>4.1</b> 您的所有配置数据存储在本地目录：</p>
+    <p class="path">C:\Users\&lt;用户名&gt;\.TerminalEmbellish\</p>
+    <p><b>4.2</b> 您可以在任何时候手动删除上述目录以清除所有配置数据，本软件不会在任何位置保留备份或副本。</p>
+    <p><b>4.3</b> 本软件不对配置文件进行加密存储，请自行保护您设备的安全。建议您定期备份重要数据。</p>
+    <p><b>4.4</b> 若您将设备转让、出售或丢弃，请确保已手动删除上述配置目录，以防止后续使用者获取您的配置信息。</p>
+
+    <h2>五、终端隐私</h2>
+    <p><b>5.1</b> 本软件提供的 CMD 和 PowerShell 终端功能直接调用 Windows 操作系统自带终端程序，您在终端中输入的任何命令均由 Windows 系统直接处理。</p>
+    <p><b>5.2</b> 本软件<b>不会记录、存储、拦截、分析或传输</b>您在终端中的任何输入或输出内容。</p>
+    <p><b>5.3</b> 终端命令执行的结果由 Windows 操作系统及您所执行的命令内容决定，与本软件无关。<b>请勿在不理解命令含义的情况下执行来源不明的命令或脚本。</b></p>
+
+    <!-- ==================== 第二部分 ==================== -->
+    <div class="part-title">第二部分：作者免责声明</div>
+
+    <h2>六、软件提供方式</h2>
+    <p><b>6.1</b> 本软件按<b>"现状"（AS IS）</b>提供，<b>不作任何明示或暗示的保证</b>，包括但不限于：</p>
+    <ul>
+        <li>适销性保证</li>
+        <li>特定用途适用性保证</li>
+        <li>不侵权保证</li>
+        <li>兼容性保证</li>
+        <li>无错误或无故障运行保证</li>
+    </ul>
+    <p><b>6.2</b> 开发者不保证：</p>
+    <ul>
+        <li>软件功能完全满足您的特定需求</li>
+        <li>软件运行不受干扰或不出错</li>
+        <li>软件中的所有缺陷会被修正</li>
+        <li>软件完全不含病毒或其他有害组件</li>
+    </ul>
+
+    <h2>七、责任限制</h2>
+    <div class="warning">
+        <b>7.1</b> 在任何情况下，因使用或无法使用本软件所产生的任何<b>直接、间接、附带、特殊、惩罚性或结果性损害</b>（包括但不限于数据丢失或损坏、业务中断、计算机系统故障或操作系统崩溃、硬件设备损坏、利润损失、商誉损失、其他财产损失），<b>软件开发者、贡献者及版权持有人均不承担任何责任</b>，即使已被告知此类损害的可能性。您明确承认并同意自行承担使用本软件的全部风险。<br><br>
+        <b>7.2</b> 本免责声明在法律允许的最大范围内适用。
+    </div>
+
+    <h2>八、终端免责</h2>
+    <p><b>8.1</b> 用户在使用本软件终端功能时输入的任何命令、脚本、代码，所产生的一切后果（包括但不限于文件误删、系统配置错误、数据永久丢失）<b>由用户自行承担全部责任。</b></p>
+    <p><b>8.2</b> 对于因执行第三方提供的命令、脚本或代码所造成的任何损失，软件开发者不承担任何责任。</p>
+
+    <h2>九、第三方资源</h2>
+    <p><b>9.1</b> 本软件中使用的视频素材均来源于互联网，仅供学习交流与个人美化使用。若您是相关素材的合法权利人，认为本软件中的内容侵犯了您的合法权益，请通过本协议所列联系方式通知开发者，开发者在收到符合法律要求的通知后，将在合理期限内核实并采取删除、替换等措施。</p>
+    <p><b>9.2</b> 本软件可能包含指向第三方网站或服务的链接（如 GitHub、Gitee），开发者对这些第三方内容的合法性、准确性或安全性不作任何保证，您访问第三方链接所产生的风险由您自行承担。</p>
+
+    <h2>十、适用法律与争议解决</h2>
+    <p><b>10.1</b> 本协议的订立、执行、解释及争议解决均适用<b>中华人民共和国法律</b>。</p>
+    <p><b>10.2</b> 因本协议引起的或与本协议有关的任何争议，双方应首先友好协商解决；协商不成的，任何一方有权向<b>开发者所在地有管辖权的人民法院</b>提起诉讼。</p>
+    <p><b>10.3</b> 如本协议中的任何条款被认定为无效或不可执行，该条款应在必要的最小范围内被限制或删除，不影响本协议其余条款的效力与执行。</p>
+
+    <!-- ==================== 第三部分 ==================== -->
+    <div class="part-title">第三部分：赞助协议</div>
+
+    <h2>十一、捐赠性质</h2>
+    <p><b>11.1</b> 捐赠是<b>完全自愿</b>的行为。您在任何情况下均没有义务向本软件进行捐赠。<b>无论是否捐赠，本软件均保持开源免费，所有功能无差别向所有用户开放。</b></p>
+    <p><b>11.2</b> 捐赠行为不代表您与本软件开发者之间构成任何形式的<b>雇佣关系、合作关系、代理关系或信托关系</b>。</p>
+    <p><b>11.3</b> 捐赠款项一经支付，即视为您对本软件开发的<b>无偿赠与</b>，不构成任何形式的投资、借贷或交易。</p>
+
+    <h2>十二、捐赠用途</h2>
+    <p><b>12.1</b> 捐赠款项将用于（包括但不限于）：</p>
+    <ul>
+        <li>服务器与域名费用</li>
+        <li>开发设备购置与维护</li>
+        <li>第三方服务订阅（API、CDN 等）</li>
+        <li>软件测试与安全审计</li>
+        <li>其他与 TE终端盒子 项目相关的合理开支</li>
+    </ul>
+    <p><b>12.2</b> 开发者保留根据项目实际需求合理调整资金用途的权利，无需另行通知捐赠者。</p>
+
+    <h2>十三、退款政策</h2>
+    <p><b>13.1</b> 捐赠款项一经支付，<b>原则上不予退还</b>，请您在捐赠前充分考虑自身意愿与经济能力。</p>
+    <p><b>13.2</b> 以下特殊情况可申请退款：</p>
+    <ul>
+        <li>重复扣款或系统故障导致多扣款</li>
+        <li>未成年的捐赠者在未经监护人同意的情况下进行的捐赠</li>
+        <li>其他经开发者核实确认属于异常支付的情况</li>
+    </ul>
+    <p><b>13.3</b> 退款申请请通过邮箱 <b>siyecao-meng@outlook.com</b> 联系，需提供捐赠凭证。开发者在核实后的 <b>7 个工作日内</b> 处理退款。</p>
+
+    <h2>十四、捐赠者权益</h2>
+    <p><b>14.1</b> 捐赠者<b>不会</b>因捐赠行为获得本软件的任何特殊权利，包括但不限于：</p>
+    <ul>
+        <li>不享有软件所有权或知识产权份额</li>
+        <li>不对软件开发方向、功能优先级或版本发布计划具有决定权</li>
+        <li>不因捐赠金额高低而获得差异化的技术支持或优先响应</li>
+        <li>不享有软件运营决策的投票权或否决权</li>
+        <li>不享有优先修复 Bug 或优先响应反馈的承诺</li>
+    </ul>
+    <p><b>14.2</b> 如捐赠者提供了可展示的昵称或 ID，开发者可在软件"致谢"页面或项目仓库中予以鸣谢。捐赠者亦可选择匿名捐赠。</p>
+
+    <h2>十五、税务</h2>
+    <p><b>15.1</b> 因捐赠产生的任何税务问题，由捐赠者自行负责处理。开发者不提供税务咨询，也不对捐赠的税务处理承担任何责任。</p>
+
+    <h2>十六、赞助协议与软件维护</h2>
+    <p><b>16.1</b> 开发者利用业余时间维护此项目，捐赠不影响开发者对项目投入的时间和精力承诺。</p>
+    <p><b>16.2</b> 开发者有权随时暂停、终止本软件的开发与维护，或调整捐赠通道的开放状态，已收到的捐赠款项不予退还。</p>
+
+    <hr class="divider">
+
+    <h2>十七、联系方式</h2>
+    <p>📧 <b>联系邮箱：</b>siyecao-meng@outlook.com</p>
+    <p>🔗 <b>GitHub：</b><a href="https://github.com/siyecao-mengs/TE">siyecao-mengs/TE</a></p>
+    <p>🔗 <b>Gitee：</b><a href="https://gitee.com/siyecao-meng/TE">siyecao-meng/TE</a></p>
+
+    <h2>十八、协议修改</h2>
+    <p><b>18.1</b> 本协议可能随软件版本更新而调整，更新后的协议将随新版软件一同发布，并在首次启动时提示用户重新确认。</p>
+    <p><b>18.2</b> 若您不同意更新后的协议条款，您应停止使用本软件并卸载。</p>
+    <p><b>18.3</b> 协议更新后继续使用本软件即视为同意修改后的全部条款。</p>
+
+    <hr class="divider">
+
+    <p style="text-align:center;color:#999;font-size:12px;"><b>© 2026 siyecao-meng. All rights reserved.</b></p>
+    <p style="text-align:center;color:#999;font-size:12px;">TE终端盒子 - TerminalEmbellish</p>
+
+    <div class="footer">🦆 本协议为 TE终端盒子 用户协议的全部内容</div>
+
+</body>
+</html>

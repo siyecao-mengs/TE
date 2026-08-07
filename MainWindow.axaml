@@ -1,0 +1,48 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="TerminalEmbellish.MainWindow"
+        Title="TerminalEmbellish"
+        Height="880" Width="460"
+        MinWidth="460" MinHeight="880"
+        MaxWidth="4000" MaxHeight="4000"
+        Background="White"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaTitleBarHeightHint="0"
+        SystemDecorations="None">
+  <Grid>
+    <Panel x:Name="BackgroundLayer" />
+    <Grid Margin="0,40,0,0">
+      <ScrollViewer x:Name="CardScrollViewer" Background="Transparent" VerticalScrollBarVisibility="Hidden">
+        <WrapPanel x:Name="CardPanel" Background="Transparent"/>
+      </ScrollViewer>
+      <Panel x:Name="SliderHost" Width="20" HorizontalAlignment="Right" />
+    </Grid>
+    <Grid VerticalAlignment="Top" Height="40" Background="Transparent">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="40"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="40"/>
+      </Grid.ColumnDefinitions>
+      <Button Grid.Column="0" x:Name="BtnDots" Width="32" Height="32"
+              Background="Transparent" BorderThickness="0"
+              Padding="0" Cursor="Hand"
+              HorizontalAlignment="Left" VerticalAlignment="Center" Margin="6,0,0,0">
+        <Canvas Width="20" Height="10">
+          <Ellipse Width="3" Height="3" Fill="Black" Canvas.Left="2" Canvas.Top="3.5"/>
+          <Ellipse Width="3" Height="3" Fill="Black" Canvas.Left="9" Canvas.Top="3.5"/>
+          <Ellipse Width="3" Height="3" Fill="Black" Canvas.Left="15" Canvas.Top="3.5"/>
+        </Canvas>
+      </Button>
+      <Border Grid.Column="1" x:Name="DragRegion" Background="Transparent" />
+      <Button Grid.Column="2" x:Name="BtnPlus" Width="32" Height="32"
+              Background="Transparent" BorderThickness="0"
+              Padding="0" Cursor="Hand"
+              HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0">
+        <Canvas Width="24" Height="24">
+          <Path Data="M 5 12 L 19 12 M 12 5 L 12 19"
+                Stroke="Black" StrokeThickness="2.5"/>
+        </Canvas>
+      </Button>
+    </Grid>
+  </Grid>
+</Window>
