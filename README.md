@@ -1,6 +1,10 @@
-# TE 终端盒子 v1.0.0-beta 即将发布！
-![TE图标](https://github.com/siyecao-mengs/TE/blob/main/icon.png)
-一款绿色、轻量、高颜值的 Windows 终端美化工具，后续版本将支持linux终端，termux终端
+# TE 终端盒子 v1.0.0-beta
+
+<img src="https://github.com/siyecao-mengs/TE/blob/main/icon.png" width="15%">
+
+### 一款绿色、轻量、高颜值的 Windows 终端美化工具，后续版本将支持linux终端，termux终端
+
+---
 
 ## 功能说明
 - 🖥️ 多终端支持 内置 CMD + PowerShell，开箱即用
@@ -50,3 +54,9 @@ flowchart LR
     D --> F[WebView2 Fixed]
     D --> G[ffmpeg.exe]
 ```
+---
+
+# 使用方法
+
+## 1.下载
+
