@@ -1,4 +1,4 @@
-# TE 终端盒子 v1.0.0-beta
+# TE 终端盒子 v1.0.1 首个正式版
 
 <img src="https://github.com/siyecao-mengs/TE/blob/main/icon.png" width="15%">
 
