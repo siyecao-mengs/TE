@@ -5,6 +5,27 @@
 ### 一款绿色、高颜值的 Windows 终端美化工具，后续版本将支持linux终端，termux终端
 
 ---
+## ⚠️ 重要提示
+
+**Gitee 仅作为镜像站点，不提供 Issue 支持。**
+
+如有任何问题、Bug 反馈或功能建议，请前往 GitHub 提交 Issue：
+
+👉 **[github.com/siyecao-mengs/TE/issues](https://github.com/siyecao-mengs/TE/issues)**
+
+---
+
+### 🔗 相关链接
+
+| 平台 | 地址 |
+|------|------|
+| **GitHub 仓库** | [github.com/siyecao-mengs/TE](https://github.com/siyecao-mengs/TE) |
+| **GitHub Issues** | [提交反馈](https://github.com/siyecao-mengs/TE/issues) |
+| **Gitee 镜像** | [gitee.com/siyecao-meng/TE](https://gitee.com/siyecao-meng/TE) |
+| **下载 Release** | [最新版本](https://github.com/siyecao-mengs/TE/releases) |
+
+---
+
 
 ## 功能说明
 - 🖥️ 多终端支持 内置 CMD + PowerShell，开箱即用
